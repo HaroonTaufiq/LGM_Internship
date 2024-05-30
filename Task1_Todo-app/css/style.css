@@ -122,6 +122,7 @@ body{
   margin-left: 5px;
   background: #8E49E8;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   opacity: 0.6;
   pointer-events: none;

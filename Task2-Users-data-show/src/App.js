@@ -8,7 +8,7 @@ const App = () => {
     const response = await fetch("https://api.github.com/users");
     const jsonResponse = await response.json();
     setUsers(jsonResponse);
-  };
+  };  
 
   return (
     <div className="App">
@@ -17,12 +17,11 @@ const App = () => {
 
       <h2> Users: </h2>
       <ul>
-        {users.map(({ id, login, avatar_url }) => (
-          <li key={id}>
-            {" "}
-            Name: {login} Avatar: {avatar_url}{" "}
-          </li>
-        ))}
+      {users.map(({ id, login, avatar_url }) => (
+  <li key={id} className="user-card">
+    Name: {login} Avatar: {avatar_url}
+  </li>
+))}
       </ul>
     </div>
   );
